@@ -6,6 +6,8 @@ describe("This is the suite: Just test xiaohongshu can open", function() {
     restfulUtils.setServerURL(url);
     restfulUtils.setHttpMethod("get");
     restfulUtils.execute();
-    JSLog.info(restfulUtils.getResponseBody());
+    var jsonObj = JSON.parse(restfulUtils.getResponseBody());
+    expect(jsonObj.status).toBe('0');
+    caseResult.setResultMsg(jsonObj.result.content);
   });
 });
