@@ -1,0 +1,25 @@
+{
+  "name" : "蘑菇街app良品主页",
+  "elements":[
+    {
+      "id":"notice",
+      "name":"通知",
+      "android":"",
+      "ios":"accessibilityid://通知"
+    },
+    {
+      "id":"newChatButton",
+      "name":"新建聊天",
+      "android":"",
+      "ios":"accessibilityid://dd contacts right bar"
+    },
+    {
+      "id":"newChat",
+      "name":"发起聊天",
+      "android":"",
+      "ios":"accessibilityid://发起聊天"
+    }
+  ]
+}
+
+

@@ -1,0 +1,30 @@
+{
+	"name" : "806SocialCameraMenu",
+	"elements" : [
+		{
+			"id" : "PostMenu",
+			"name" : "发表选项面板",
+			"android" : "xpath:////android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]"
+		},
+		{
+			"id" : "VideoButton",
+			"name" : "视频按钮",
+			"android" : "xpath:////android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]"
+		},
+		{
+			"id" : "PhotoButton",
+			"name" : "照片按钮",
+			"android" : "xpath:////android.widget.RelativeLayout[1]/android.widget.LinearLayout[2]"
+		},
+		{
+			"id" : "LiveButton",
+			"name" : "直播按钮",
+			"android" : "xpath:////android.widget.RelativeLayout[1]/android.widget.LinearLayout[3]"
+		},
+		{
+			"id" : "CloseButton",
+			"name" : "关闭发表选项面板按钮",
+			"android" : "xpath:////android.widget.RelativeLayout[1]/android.widget.FrameLayout[1]"
+		}
+	]
+}

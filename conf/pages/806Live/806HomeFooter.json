@@ -1,0 +1,25 @@
+{
+	"name" : "806HomeFooter",
+	"elements" : [
+		{
+			"id" : "FashionButton",
+			"name" : "时尚按钮",
+			"android" : "xpath:////android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[3]/android.widget.ImageView[1]"
+		},
+		{
+			"id" : "CameraButton",
+			"name" : "相机按钮",
+			"android" : "xpath:////android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[3]"
+		},
+		{
+			"id" : "ChatButton",
+			"name" : "聊天按钮",
+			"android" : "xpath:////android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[4]"
+		},
+		{
+			"id" : "MeButton",
+			"name" : "我的按钮",
+			"android" : "xpath:////android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[5]"
+		}
+	]
+}

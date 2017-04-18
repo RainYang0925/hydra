@@ -1,0 +1,42 @@
+{
+  "name" : "蘑菇街app聊天主页",
+  "elements":[
+    {
+      "id":"notice",
+      "name":"通知",
+      "android":"",
+      "ios":"accessibilityid://通知"
+    },
+    {
+      "id":"newChatButton",
+      "name":"新建聊天",
+      "android":"xpath:////android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.TabHost[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[1]/android.widget.ImageView[1]",
+      "ios":"accessibilityid://dd contacts right bar"
+    },
+    {
+      "id":"newChat",
+      "name":"发起聊天",
+      "android":"xpath:////android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]",
+      "ios":"accessibilityid://发起聊天"
+    },
+    {
+      "id":"firstTalk",
+      "name":"聊天1",
+      "android":"xpath:////android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[2]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.ListView[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]",
+      "ios":"xpath:////UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[4]"
+    },
+    {
+      "id":"delete1",
+      "name":"删除1",
+      "android":"",
+      "ios":"xpath:////UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableCell[4]/UIAStaticText[2]"
+    },    {
+      "id":"3Talk",
+      "name":"蘑菇街官方",
+      "android":"",
+      "ios":"accessibilityid://蘑菇街官方"
+    },
+  ]
+}
+
+

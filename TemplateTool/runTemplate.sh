@@ -1,0 +1,1 @@
+java -classpath hydra.jar com.xiaohongshu.automation.utils.TemplateTool $1 $2 $3

@@ -1,0 +1,10 @@
+{
+	"name" : "806LiveNavi",
+	"elements" : [
+		{
+			"id" : "MemedouNavi",
+			"name" : "么么豆引导页",
+			"android" : "xpath:////android.widget.LinearLayout[1]/android.widget.ImageView[1]"
+		}
+	]
+}

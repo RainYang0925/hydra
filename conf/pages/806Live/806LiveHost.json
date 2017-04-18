@@ -1,0 +1,20 @@
+{
+	"name" : "806LiveHost",
+	"elements" : [
+		{
+			"id" : "Exit",
+			"name" : "关闭直播",
+			"android" : "xpath:////android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[3]/android.widget.ImageView[1]"
+		},
+		{
+			"id" : "SlideNavi",
+			"name" : "右滑引导",
+			"android" : "xpath:////android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ImageView[1]"
+		},
+		{
+			"id" : "WholePage",
+			"name" : "当前页",
+			"android" : "xpath:////android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.FrameLayout[1]"
+		}
+	]
+}

@@ -1,0 +1,156 @@
+<html >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+        div#piechart {width:40%;float:left;}
+        div#content {width:60%;float:right;}
+        div#reportDetail {clear:both;width:100%;}
+        .myh2{
+            background-color:white;
+            font-size: 1.5em;
+            color:black;
+            font-weight: bold;
+            font-family: Times;
+        }
+        .myh3{
+            background-color:white;
+            font-size: 1.17em;
+            color:black;
+            font-weight: bold;
+            font-family: Times;
+        }
+    </style>
+</head>
+<body>
+#if($result.isPass())
+<div id="piechart" style="min-width: 200px; height: 300px; max-width: 600px; margin: 0 auto"></div>
+<div id="content">
+    <br/>
+    <br/>
+    <br/>
+    <h2 class="myh2">
+        整体测试结果: 共计$result.getAllChildNums()个测试用例, 其中成功$result.getAllPassResults()个, 失败$result.getAllFailResults()个, 测试通过率: $result.getAllSuccssRate()
+    </h2>
+    <h3 class="myh3" >
+        测试开始时间: $result.getTime().getStartTime()
+    </h3>
+    <h3 class="myh3">
+        测试结束时间: $result.getTime().getEndTime()
+    </h3>
+    <h3 class="myh3">
+        共计耗时: $result.getTime().getTimeCost()秒
+    </h3>
+    <br/>
+    <br/>
+    <br/>
+</div>
+<div id="reportDetail">
+    <h3 class="myh3">
+        详细测试报告如下:
+    </h3>
+    <table id="reportTable" class="display" cellspacing="0" width="100%" style="word-break:break-all; word-wrap:break-word;font-family:Times">
+        <thead>
+        <tr>
+            <th width="10%">测试集</th>
+            <th width="20%">通过率(测试用例)</th>
+            <th width="10%">开始时间</th>
+            <th width="10%">结束时间</th>
+            <th width="10%">耗时(秒)</th>
+            <th width="15%">测试结果</th>
+            <th width="25%">结果描述</th>
+        </tr>
+        </thead>
+
+        <tbody>
+            #set($suiteIndex=1)
+            #foreach($suiteResult in $result.getChildResults())
+            <tr>
+                <td width="10%">$suiteIndex、$suiteResult.getName()</td>
+                <td width="20%">$suiteResult.getSuccessRate(), 共计$suiteResult.getChildNums()个, 成功$suiteResult.getPassResults()个</td>
+                <td width="10%">$suiteResult.getTime().getStartTime()</td>
+                <td width="10%">$suiteResult.getTime().getEndTime()</td>
+                <td width="10%">$suiteResult.getTime().getTimeCost()</td>
+                <td width="15%">$suiteResult.getResult()</td>
+                <td width="25%">$suiteResult.getResultMsg()</td>
+            </tr>
+                #set($suiteIndex=$suiteIndex+1)
+                #set($caseIndex=1)
+                #foreach($caseResult in $suiteResult.getChildResults())
+                <tr>
+                    <td width="10%"></td>
+                    <td width="20%">$caseIndex)$caseResult.getName()</td>
+                    <td width="10%">$caseResult.getTime().getStartTime()</td>
+                    <td width="10%">$caseResult.getTime().getEndTime()</td>
+                    <td width="10%">$caseResult.getTime().getTimeCost()</td>
+                    <td width="15%">$caseResult.getResult()</td>
+                    <td width="25%">$caseResult.getResultMsg()</td>
+                </tr>
+                    #set($caseIndex=$caseIndex+1)
+                #end
+            #end
+        </tbody>
+    </table>
+</div>
+#else
+    <h2 class="myh2">
+        测试执行失败, 由于: $result.getResultMsg()
+    </h2>
+#end
+
+</body>
+</html>
+
+<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery.dataTables.min.js"></script>
+<script src="js/highcharts.js"></script>
+<script src="js/exporting.js"></script>
+
+
+<script>
+    $('#reportTable').DataTable({
+                "order": []
+            }
+    );
+    $(function () {
+        $('#piechart').highcharts({
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Test Result'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.2f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.2f} %',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'red'
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Brands',
+                colorByPoint: true,
+                data: [{
+                    name: 'pass',
+                    y: $result.getAllPassResults()
+                }, {
+                    name: 'fail',
+                    y: $result.getAllFailResults(),
+                    selected: true
+                }]
+            }]
+        });
+    });
+</script>

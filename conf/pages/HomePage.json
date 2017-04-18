@@ -1,0 +1,19 @@
+{
+  "name" : "蘑菇街app主页",
+  "elements":[
+    {
+      "id":"chartButton",
+      "name":"聊天按钮",
+      "android":"xpath:////android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[2]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[4]/android.widget.ImageView[1]",
+      "ios":"accessibilityid://Resource.bundle/tabbar_im"
+    },
+    {
+      "id":"liangPinButton",
+      "name":"良品按钮",
+      "android":"id://test1",
+      "ios":"xpath:////UIAApplication[1]/UIAWindow[1]/UIAImage[6]/UIAImage[2]"
+    }
+  ]
+}
+
+

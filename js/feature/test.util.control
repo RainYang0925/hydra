@@ -1,0 +1,9 @@
+api/sns/v1/search/trending/SearchTrending.js
+api/sns/v3/search/recommend/SearchRecommend.js
+api/sns/v1/search/notes/recommend_info/Recommend_Info.js
+api/sns/v1/search/notes/recommend_filters/RecommendFilters.js
+api/sns/v6/search/notes.js
+api/sns/v1/search/filter/filter.js
+api/store/ps/items.js
+api/store/ps/banners.js
+api/store/ps/tags.js

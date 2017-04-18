@@ -1,0 +1,25 @@
+{
+	"name" : "主客首页616大促弹窗",
+	"elements" : [
+		{
+			"id" : "616View",
+			"name" : "弹窗窗口",
+			"android" : "xpath:////android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.webkit.WebView[1]/android.webkit.WebView[1]/android.view.View[1]"
+		},
+		{
+			"id" : "CloseButton",
+			"name" : "小窗口关闭按钮",
+			"android" : "xpath:////android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.TextView[1][@resource-id='com.mogujie:id/acr']"
+		},
+		{
+			"id" : "ShoppingAd",
+			"name" : "购物页广告",
+			"android" : "xpath:////android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.widget.ImageView[1]"
+		},
+		{
+			"id" : "PassButton",
+			"name" : "大弹窗跳过按钮",
+			"android" : "xpath:////android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.TextView[1][@resource-id='com.mogujie:id/crp']"
+		}
+	]
+}
