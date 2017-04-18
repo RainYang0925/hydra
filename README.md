@@ -12,6 +12,15 @@
 2. try runTest.sh feature/test.control
 3. wait & see ... 
 
+# 框架基本思路
+1. BDD，测试同学专注测试逻辑。
+2. 尽量Download & Play。 
+3. 基于JVM和Maven，能复用大部分互联网公司的轮子（UI的WebDriver、Appium、Restful、BDD的Cucumber-jvm、Jasmine、Pytest(需要jython支持）
+4. 起于JVM + Jasmine, 即通过JVM上的动态脚本语言能力，Inject Jasmine的BDD框架，同时能无缝访问java世界中的无数的成熟工具。
+5. 对于测试用例开发者来说，一个简单的文本编辑器即可。
+6. 同时也可以通过maven直接打出all-in-one的可执行jar包。方便接入C.I
+7. 提供统一的Report和Verdict。 设定了统一的CaseResult和SuiteResult，对于不同的Runner（Jasmine，TestNG，PyTest或者Cucumber-jvm）来说能获得统一的case和suite粒度的报告。
+
 # 工程配置方法
 
 1、用idea打开，选择pom.xml，工程的入口为com.xiaohongshu.automation.Application.java    
